@@ -33,6 +33,23 @@ export default function Home() {
       {/* 1. Hero Module */}
       <Hero />
 
+      {/* 2. Sectors Showcase Columns */}
+      <section id="business-divisions" className="py-24 bg-slate-100/30 border-y border-slate-200/80 relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionTitle
+            title="القطاعات الاستراتيجية للمجموعة"
+            subtitle="ندير محفظة استثمارات ضخمة ومتنوعة توفر ركائز أساسية للحياة والصناعة الحديثة"
+            badge="مؤسسات صناعية متكاملة"
+          />
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+            {sectorsData.map((sector, idx) => (
+              <SectorCard key={sector.id} sector={sector} index={idx} />
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* 2. Welcome/Introduction Section with Scroll Animations */}
       <section id="executive-introduction" className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="absolute top-1/2 right-0 w-[400px] h-[300px] bg-gold-500/5 blur-[120px] rounded-full pointer-events-none" />
@@ -123,23 +140,6 @@ export default function Home() {
             </div>
           </motion.div>
 
-        </div>
-      </section>
-
-      {/* 3. Sectors Showcase Columns */}
-      <section id="business-divisions" className="py-24 bg-slate-100/30 border-y border-slate-200/80 relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionTitle
-            title="القطاعات الاستراتيجية للمجموعة"
-            subtitle="ندير محفظة استثمارات ضخمة ومتنوعة توفر ركائز أساسية للحياة والصناعة الحديثة"
-            badge="مؤسسات صناعية متكاملة"
-          />
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-            {sectorsData.map((sector, idx) => (
-              <SectorCard key={sector.id} sector={sector} index={idx} />
-            ))}
-          </div>
         </div>
       </section>
 
