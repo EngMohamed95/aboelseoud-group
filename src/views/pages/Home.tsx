@@ -84,7 +84,7 @@ export default function Home() {
             {/* Elegant Corporate Office Image */}
             <div className="relative aspect-[16/9] w-full bg-slate-100 rounded-2xl overflow-hidden border border-slate-200 shadow-md">
               <img
-                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800"
+                src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=800"
                 alt="Abo El-Seoud Corporate Headquarters"
                 className="w-full h-full object-cover rounded-2xl"
                 referrerPolicy="no-referrer"

@@ -21,22 +21,22 @@ export default function Cement() {
     {
       title: "خطوط بحرية وبرية يومية فائقة السرعة",
       desc: "نملك ونشغل خطوط لوجستية مباشرة تربط مصانع التعبئة والإنتاج بمصر مباشرة بأسواق التوزيع والتعقب في دولة ليبيا الشقيقة عبر معابر السلوم والموانئ الساحلية لضمان التسليم اللحظي.",
-      image: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=600&q=80"
+      image: "https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?auto=format&fit=crop&w=600&q=80"
     },
     {
       title: "عمليات تشغيل وصيانة على مدار الساعة 24/7",
       desc: "يعمل الكادر الفني والهندسي في شركة جبل بالتناوب والورديات المستقرة للمحافظة على معدلات طاقة الإنتاج والتحميل دون انقطاع لتلبية المشاريع القومية.",
-      image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=600&q=80"
+      image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=600&q=80"
     }
   ];
 
   const cementGallery = [
     {
-      url: "https://images.unsplash.com/photo-1517646287270-a5a9ca602e5c?auto=format&fit=crop&w=800&q=80",
+      url: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80",
       caption: "مشاريع البنية التحتية والكباري والخرسانات الجاهزة"
     },
     {
-      url: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80",
+      url: "https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?auto=format&fit=crop&w=800&q=80",
       caption: "معدات الشحن والتحميل البري للمعابر الدولية"
     },
     {
@@ -56,7 +56,7 @@ export default function Cement() {
         {/* Unsplash dramatic industrial construction site */}
         <div 
           className="absolute inset-0 bg-cover bg-center z-0 scale-102 filter brightness-[1.05] opacity-15" 
-          style={{ backgroundImage: `url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=1600')` }}
+          style={{ backgroundImage: `url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1600')` }}
         />
         {/* Gentle background overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#FAF9F6]/30 via-[#FAF9F6]/90 to-[#FAF9F6] z-0" />
@@ -123,7 +123,7 @@ export default function Cement() {
               {/* Heavy concrete crane plant sunset visual */}
               <div className="relative aspect-[16/9] w-full rounded-xl overflow-hidden mb-6 border border-slate-100 shadow-md">
                 <img
-                  src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=800"
+                  src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=800"
                   alt="Cement plant production silos"
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
