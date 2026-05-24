@@ -200,10 +200,6 @@ export default function Navbar() {
 
           {/* Right side global quick-link CTAs */}
           <div className="hidden md:flex items-center space-x-4 space-x-reverse">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-slate-50 border border-slate-200 text-xs text-gold-600 rounded-full font-mono font-semibold">
-              <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
-              GLOBAL HQ
-            </span>
             <Link
               to="/contact"
               className="px-5 py-2.5 bg-gradient-to-r from-gold-600 to-gold-500 hover:from-gold-500 hover:to-gold-400 text-slate-950 text-xs font-extrabold rounded shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5"
