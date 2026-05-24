@@ -3,8 +3,10 @@ import { Link } from "react-router-dom";
 import { motion } from "motion/react";
 import { ShieldCheck, Truck, Snowflake, Globe, Award, ShieldAlert, CheckCircle2, Leaf, Heart } from "lucide-react";
 import SectionTitle from "../components/SectionTitle";
+import { brandThemes } from "../../models/brandModel";
 
 export default function MeatImport() {
+  const brand = brandThemes.meat;
   const supplyChainSteps = [
     {
       step: "01",
@@ -45,7 +47,16 @@ export default function MeatImport() {
   ];
 
   return (
-    <div id="meat-sector-view" className="bg-[#FAF9F5] min-h-screen text-emerald-950 pt-24 font-sans selection:bg-emerald-500 selection:text-white">
+    <div
+      id="meat-sector-view"
+      style={{
+        "--brand-primary": brand.primary,
+        "--brand-secondary": brand.secondary,
+        "--brand-accent": brand.accent,
+        "--brand-soft": brand.soft,
+      } as React.CSSProperties}
+      className="brand-scope bg-[#FAF9F5] min-h-screen text-emerald-950 pt-24 font-sans selection:bg-emerald-500 selection:text-white"
+    >
       
       {/* 1. Immersive Farmland Hero Section with Green/Gold Grading */}
       <div className="relative py-28 overflow-hidden border-b border-emerald-900/10">

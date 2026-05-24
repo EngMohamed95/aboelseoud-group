@@ -3,8 +3,10 @@ import { Link } from "react-router-dom";
 import { motion } from "motion/react";
 import { HardHat, ShieldCheck, Award, Construction, Compass, ShieldAlert, Zap, Layers, BarChart, FileText } from "lucide-react";
 import SectionTitle from "../components/SectionTitle";
+import { brandThemes } from "../../models/brandModel";
 
 export default function Cement() {
+  const brand = brandThemes.cement;
   const cementStats = [
     { title: "بورتلاندي عالي المقاومة", value: "CEM I 42.5R" },
     { title: "التصدير والخدمة الأساسية", value: "مصر ← ليبيا" },
@@ -46,7 +48,16 @@ export default function Cement() {
   ];
 
   return (
-    <div id="cement-sector-view" className="bg-[#FAF9F6] min-h-screen text-slate-800 pt-24 font-sans selection:bg-amber-500 selection:text-white relative overflow-hidden">
+    <div
+      id="cement-sector-view"
+      style={{
+        "--brand-primary": brand.primary,
+        "--brand-secondary": brand.secondary,
+        "--brand-accent": brand.accent,
+        "--brand-soft": brand.soft,
+      } as React.CSSProperties}
+      className="brand-scope bg-[#FAF9F6] min-h-screen text-slate-800 pt-24 font-sans selection:bg-amber-500 selection:text-white relative overflow-hidden"
+    >
       
       {/* Decorative Blueprint Construction Grid Overlays (Light edition) */}
       <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#d97706_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />

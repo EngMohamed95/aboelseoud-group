@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "motion/react";
 import { Ship, ChevronLeft, ChevronRight, Award, Globe, Users, ShieldCheck } from "lucide-react";
 import AnimatedCounter from "./AnimatedCounter";
 import { groupStatsData } from "../../models/statsModel";
+import { brandThemes, BrandKey } from "../../models/brandModel";
 
 interface SlideData {
   id: string;
@@ -13,6 +14,7 @@ interface SlideData {
   desc: string;
   image: string;
   link: string;
+  brandKey: BrandKey;
 }
 
 export default function Hero() {
@@ -28,7 +30,8 @@ export default function Hero() {
       heading: "نحرك طاقة العالم بأمان وكفاءة معتمدة",
       desc: "نمتلك ونشط أساطيل ناقلات النفط والمواد البترولية المطابقة لمواصفات IMO الدولية لتأمين خطوط الطاقة وسلاسل الإمداد العالمية بين القارات.",
       image: "https://images.unsplash.com/photo-1605281317010-fe5ffe798166?auto=format&fit=crop&w=1200&q=80",
-      link: "/sectors/maritime"
+      link: "/sectors/maritime",
+      brandKey: "maritime"
     },
     {
       id: "meat",
@@ -37,7 +40,8 @@ export default function Hero() {
       heading: "سلسلة تبريد وحفظ مغلقة متوافقة مع الشريعة",
       desc: "نستورد أجود اللحوم من مزارع البرازيل والهند النباتية، خاضعة لرقابة بيطرية مكثفة ومشحونة مجمدة عند -18 درجة مئوية تحت إشراف الحلال المعتمد.",
       link: "/sectors/meat",
-      image: "https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?auto=format&fit=crop&w=1200&q=80"
+      image: "https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?auto=format&fit=crop&w=1200&q=80",
+      brandKey: "meat"
     },
     {
       id: "cement",
@@ -46,21 +50,24 @@ export default function Hero() {
       heading: "الرائد الإقليمي في تصدير الأسمنت البورتلاندي",
       desc: "ننتج أسمنتاً بورتلاندياً فائق المقاومة للظروف القاسية (CEM I 42.5R) بأكياس خماسية الطبقات عازلة للرطوبة لتشغيل عمليات إعمار دولة ليبيا الشريكة.",
       link: "/sectors/cement",
-      image: "https://images.unsplash.com/photo-1773394089934-3e29f2a3d6a9?auto=format&fit=crop&w=1200&q=80"
+      image: "https://images.unsplash.com/photo-1773394089934-3e29f2a3d6a9?auto=format&fit=crop&w=1200&q=80",
+      brandKey: "cement"
     }
   ];
+  const activeBrand = brandThemes[slides[currentIndex].brandKey];
+  const activeTextColor = activeBrand.key === "cement" ? "#050505" : "#ffffff";
 
   // Map icons safely for statistics
   const getStatIcon = (iconName: string) => {
     switch (iconName) {
       case "Award":
-        return <Award className="h-6 w-6 text-gold-600" />;
+        return <Award className="h-6 w-6" style={{ color: activeBrand.primary }} />;
       case "Users":
-        return <Users className="h-6 w-6 text-gold-600" />;
+        return <Users className="h-6 w-6" style={{ color: activeBrand.primary }} />;
       case "Globe":
-        return <Globe className="h-6 w-6 text-gold-600" />;
+        return <Globe className="h-6 w-6" style={{ color: activeBrand.primary }} />;
       default:
-        return <ShieldCheck className="h-6 w-6 text-gold-600" />;
+        return <ShieldCheck className="h-6 w-6" style={{ color: activeBrand.primary }} />;
     }
   };
 
@@ -100,6 +107,12 @@ export default function Hero() {
   return (
     <div 
       id="corporate-hero-slider" 
+      style={{
+        "--brand-primary": activeBrand.primary,
+        "--brand-secondary": activeBrand.secondary,
+        "--brand-accent": activeBrand.accent,
+        "--brand-soft": activeBrand.soft,
+      } as React.CSSProperties}
       className="relative min-h-screen bg-slate-950 flex flex-col justify-between overflow-hidden pt-24"
     >
       {/* Absolute Full-Bleed Animated Background Slider */}
@@ -127,8 +140,13 @@ export default function Hero() {
             {/* Secondary radial dark light filter to control glare and highlight the center */}
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_left,transparent_20%,rgba(2,6,23,0.92)_100%)] z-10" />
             
-            {/* Symmetrical fine ambient gold overlay */}
-            <div className="absolute inset-0 bg-gradient-to-tr from-gold-950/20 via-transparent to-slate-950/30 z-10" />
+            {/* Sector-colored ambient overlay */}
+            <div
+              className="absolute inset-0 z-10"
+              style={{
+                background: `linear-gradient(to top right, ${activeBrand.primary}22, transparent 45%, rgba(15,23,42,0.3))`,
+              }}
+            />
             
             {/* Bottom transition line to stats flow */}
             <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-slate-950 to-transparent z-10" />
@@ -154,9 +172,15 @@ export default function Hero() {
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: 15, scale: 0.95 }}
                 transition={{ duration: 0.5, ease: "easeOut" }}
-                className="inline-flex items-center gap-2 px-4 py-1.5 bg-gold-500/10 border border-gold-500/30 rounded-full text-gold-400 text-xs sm:text-sm font-bold shadow-lg shadow-gold-950/40"
+                className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs sm:text-sm font-bold shadow-lg"
+                style={{
+                  backgroundColor: activeBrand.soft,
+                  border: `1px solid ${activeBrand.primary}55`,
+                  color: activeBrand.accent,
+                  boxShadow: `0 12px 32px ${activeBrand.primary}20`,
+                }}
               >
-                <span className="h-2 w-2 rounded-full bg-gold-400 animate-pulse" />
+                <span className="h-2 w-2 rounded-full animate-pulse" style={{ backgroundColor: activeBrand.accent }} />
                 {slides[currentIndex].badge}
               </motion.div>
             </AnimatePresence>
@@ -169,7 +193,8 @@ export default function Hero() {
                 animate={{ opacity: 0.8 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.4, delay: 0.05 }}
-                className="text-gold-500/90 font-mono text-xs sm:text-sm tracking-widest font-extrabold uppercase"
+                className="font-mono text-xs sm:text-sm tracking-widest font-extrabold uppercase"
+                style={{ color: activeBrand.accent }}
               >
                 {slides[currentIndex].title}
               </motion.p>
@@ -216,7 +241,12 @@ export default function Hero() {
                 <Link
                   id={`cta-sector-${slides[currentIndex].id}`}
                   to={slides[currentIndex].link}
-                  className="px-8 py-4 bg-gradient-to-r from-gold-600 to-gold-500 hover:from-gold-500 hover:to-gold-400 text-slate-950 font-extrabold text-sm rounded cursor-pointer transition-all duration-300 transform hover:-translate-y-0.5 shadow-xl shadow-gold-950/30 flex items-center gap-2.5"
+                  className="px-8 py-4 font-extrabold text-sm rounded cursor-pointer transition-all duration-300 transform hover:-translate-y-0.5 shadow-xl flex items-center gap-2.5"
+                  style={{
+                    background: `linear-gradient(90deg, ${activeBrand.primary}, ${activeBrand.accent})`,
+                    color: activeTextColor,
+                    boxShadow: `0 20px 35px ${activeBrand.primary}24`,
+                  }}
                 >
                   عرض تفاصيل القطاع ودليل الأعمال
                   <ChevronLeft className="h-5 w-5 shrink-0" />
@@ -242,8 +272,9 @@ export default function Hero() {
                       resetTimer();
                     }}
                     className={`h-2.5 transition-all duration-300 rounded-full cursor-pointer ${
-                      currentIndex === idx ? "w-8 bg-gold-500" : "w-2.5 bg-white/20 hover:bg-white/40"
+                      currentIndex === idx ? "w-8" : "w-2.5 bg-white/20 hover:bg-white/40"
                     }`}
+                    style={currentIndex === idx ? { backgroundColor: activeBrand.primary } : undefined}
                     aria-label={`Go to slide ${idx + 1}`}
                   />
                 ))}
@@ -309,10 +340,11 @@ export default function Hero() {
             {groupStatsData.map((stat, idx) => (
               <div
                 key={stat.id}
-                className="p-5 rounded-2xl border border-white/5 hover:border-gold-500/20 bg-slate-900/30 hover:bg-slate-900/50 text-right transition-all duration-300 shadow-xl"
+                className="p-5 rounded-2xl border border-white/5 bg-slate-900/30 hover:bg-slate-900/50 text-right transition-all duration-300 shadow-xl"
+                style={{ ["--tw-border-opacity" as string]: 1 }}
               >
                 <div className="flex items-center gap-3 mb-2 justify-start">
-                  <div className="p-2 bg-slate-850 rounded-xl border border-white/5 shadow-inner shrink-0 text-gold-500">
+                  <div className="p-2 bg-slate-850 rounded-xl border border-white/5 shadow-inner shrink-0">
                     {getStatIcon(stat.iconName)}
                   </div>
                   <h4 className="text-xs sm:text-sm font-bold text-slate-400 leading-tight">

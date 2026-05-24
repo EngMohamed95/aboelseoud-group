@@ -73,22 +73,48 @@
 .brand-scope .text-gold-600,
 .brand-scope .text-gold-500,
 .brand-scope .text-gold-400,
+.brand-scope .text-gold-500\/90,
 .brand-scope .hover\:text-gold-600:hover,
 .brand-scope .hover\:text-gold-700:hover {
   color: var(--brand-primary);
 }
 
 .brand-scope .border-gold-500\/30,
+.brand-scope .border-gold-500\/20,
+.brand-scope .border-gold-500\/10,
+.brand-scope .border-gold-500\/5,
 .brand-scope .hover\:border-gold-500\/20:hover {
   border-color: color-mix(in srgb, var(--brand-primary) 35%, transparent);
 }
 
 .brand-scope .bg-gold-500\/5,
-.brand-scope .bg-gold-500\/10 {
+.brand-scope .bg-gold-500\/10,
+.brand-scope .bg-gold-500\/20,
+.brand-scope .from-gold-500\/5 {
   background-color: var(--brand-soft);
 }
 
 .brand-scope .bg-gold-500,
-.brand-scope .bg-gold-600 {
+.brand-scope .bg-gold-600,
+.brand-scope .bg-gold-400 {
   background-color: var(--brand-primary);
+}
+
+.brand-scope .from-gold-600,
+.brand-scope .hover\:from-gold-500:hover {
+  --tw-gradient-from: var(--brand-primary) var(--tw-gradient-from-position);
+  --tw-gradient-to: color-mix(in srgb, var(--brand-primary) 0%, transparent) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.brand-scope .to-gold-500,
+.brand-scope .to-gold-400,
+.brand-scope .hover\:to-gold-400:hover {
+  --tw-gradient-to: var(--brand-accent) var(--tw-gradient-to-position);
+}
+
+.brand-scope .shadow-gold-950\/30,
+.brand-scope .shadow-gold-950\/40 {
+  --tw-shadow-color: color-mix(in srgb, var(--brand-primary) 30%, transparent);
+  --tw-shadow: var(--tw-shadow-colored);
 }

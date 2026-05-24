@@ -4,8 +4,10 @@ import { motion } from "motion/react";
 import { Anchor, Award, ShieldAlert, Star, Compass, ShieldCheck, ArrowLeft, Layers, Radio, Ship, HardHat, Disc } from "lucide-react";
 import SectionTitle from "../components/SectionTitle";
 import WorldMap from "../components/WorldMap";
+import { brandThemes } from "../../models/brandModel";
 
 export default function Maritime() {
+  const brand = brandThemes.maritime;
   const maritimeServices = [
     {
       title: "نقل النفط الخام والمواد البترولية",
@@ -52,7 +54,16 @@ export default function Maritime() {
   ];
 
   return (
-    <div id="maritime-sector-view" className="bg-[#FAFBFD] min-h-screen text-slate-700 pt-24 relative overflow-hidden selection:bg-cyan-500 selection:text-white font-sans">
+    <div
+      id="maritime-sector-view"
+      style={{
+        "--brand-primary": brand.primary,
+        "--brand-secondary": brand.secondary,
+        "--brand-accent": brand.accent,
+        "--brand-soft": brand.soft,
+      } as React.CSSProperties}
+      className="brand-scope bg-[#FAFBFD] min-h-screen text-slate-700 pt-24 relative overflow-hidden selection:bg-cyan-500 selection:text-white font-sans"
+    >
       
       {/* Dynamic Radar Sweep Ornament in Background (Light Theme Edition) */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[1000px] h-[1000px] rounded-full border border-cyan-500/5 pointer-events-none animate-pulse" />
