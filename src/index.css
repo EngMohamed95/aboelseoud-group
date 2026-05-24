@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Almarai", system-ui, -apple-system, sans-serif;
+  --font-display: "Almarai", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-navy-950: #fafbfc; /* Modern extra-light off-white background */
+  --color-navy-900: #ffffff; /* Premium white background for sections & cards */
+  --color-navy-800: #f1f5f9; /* Light grey backdrop / slate border */
+  --color-navy-700: #e2e8f0; /* Accent border / badge backdrop */
+  --color-navy-600: #1e293b; /* Dark Slate for text */
+  --color-navy-500: #0f172a; /* Main headings Slate-900 */
+  --color-gold-500: #b89563; /* Refined golden tone with higher contrast for light background */
+  --color-gold-600: #937345;
+  --color-gold-400: #cfbaa0;
+  --color-slate-900: #1e293b;
+  --color-slate-950: #0f172a;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+    background-color: var(--color-navy-950);
+    color: var(--color-navy-600);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    direction: rtl; /* Set default to Arabic RTL */
+    overflow-x: hidden;
+  }
+
+  /* Custom premium light scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #f1f5f9;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #dfd7cb;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #b89563;
+  }
+}
+
+/* Luxury Card glow utility */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #0f172a 30%, #a28254 70%, #b89563 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-border {
+  border: 1px solid rgba(197, 168, 128, 0.2);
+}
+
+.gold-glow {
+  box-shadow: 0 0 25px rgba(197, 168, 128, 0.08);
+}
+
+.gold-glow-hover:hover {
+  box-shadow: 0 0 35px rgba(197, 168, 128, 0.2);
+  border-color: rgba(197, 168, 128, 0.4);
+}

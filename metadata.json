@@ -1,0 +1,6 @@
+{
+  "name": "Abo El-Seoud Group",
+  "description": "الموقع الرسمي لمجموعة أبو السعود جروب - ريادة الأعمال العالمية في النقل البحري، الأمن الغذائي، وتصدير الأسمنت.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
