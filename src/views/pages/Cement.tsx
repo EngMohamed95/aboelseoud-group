@@ -18,7 +18,7 @@ export default function Cement() {
     {
       title: "أكياس خماسية الطبقات فائقة التحمل للرطوبة",
       desc: "نعبئ الأسمنت بداخل عبوات متطورة ومحمية بطبقات بلاستيكية داخلية تمنع نفوذ الرطوبة الجوية أو بخار الماء المالح أثناء الرحلة البحرية والبرية الطويلة، مما يضمن كفاءة الخلط الخرساني بنسبة 100%.",
-      image: "https://cdn.pixabay.com/photo/2020/05/31/23/29/cement-truck-5240567_1280.jpg"
+      image: "https://images.unsplash.com/photo-1708596718852-1147b2ffbaf0?auto=format&fit=crop&w=800&q=85"
     },
     {
       title: "خطوط بحرية وبرية يومية فائقة السرعة",
@@ -28,13 +28,13 @@ export default function Cement() {
     {
       title: "عمليات تشغيل وصيانة على مدار الساعة 24/7",
       desc: "يعمل الكادر الفني والهندسي في شركة جبل بالتناوب والورديات المستقرة للمحافظة على معدلات طاقة الإنتاج والتحميل دون انقطاع لتلبية المشاريع القومية.",
-      image: "https://cdn.pixabay.com/photo/2020/05/31/23/29/cement-truck-5240567_1280.jpg"
+      image: "https://images.unsplash.com/photo-1708596718852-1147b2ffbaf0?auto=format&fit=crop&w=800&q=85"
     }
   ];
 
   const cementGallery = [
     {
-      url: "https://cdn.pixabay.com/photo/2020/05/31/23/29/cement-truck-5240567_1280.jpg",
+      url: "https://images.unsplash.com/photo-1708596718852-1147b2ffbaf0?auto=format&fit=crop&w=1000&q=85",
       caption: "مشاريع البنية التحتية والكباري والخرسانات الجاهزة"
     },
     {
@@ -67,7 +67,7 @@ export default function Cement() {
         {/* Unsplash dramatic industrial construction site */}
         <div 
           className="absolute inset-0 bg-cover bg-center z-0 scale-102 filter brightness-[1.08] contrast-[1.05] opacity-52" 
-          style={{ backgroundImage: `url('https://cdn.pixabay.com/photo/2020/05/31/23/29/cement-truck-5240567_1280.jpg')` }}
+          style={{ backgroundImage: `url('https://images.unsplash.com/photo-1708596718852-1147b2ffbaf0?auto=format&fit=crop&w=1600&q=85')` }}
         />
         {/* Gentle background overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#FAF9F6]/12 via-[#FAF9F6]/60 to-[#FAF9F6]/94 z-0" />
@@ -134,7 +134,7 @@ export default function Cement() {
               {/* Heavy concrete crane plant sunset visual */}
               <div className="relative aspect-[16/9] w-full rounded-xl overflow-hidden mb-6 border border-slate-100 shadow-md">
                 <img
-                  src="https://cdn.pixabay.com/photo/2020/05/31/23/29/cement-truck-5240567_1280.jpg"
+                  src="https://images.unsplash.com/photo-1708596718852-1147b2ffbaf0?auto=format&fit=crop&w=1000&q=85"
                   alt="Cement plant production silos"
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
@@ -281,3 +281,4 @@ export default function Cement() {
     </div>
   );
 }
+

@@ -50,7 +50,7 @@ export default function Hero() {
       heading: "الرائد الإقليمي في تصدير الأسمنت البورتلاندي",
       desc: "ننتج أسمنتاً بورتلاندياً فائق المقاومة للظروف القاسية (CEM I 42.5R) بأكياس خماسية الطبقات عازلة للرطوبة لتشغيل عمليات إعمار دولة ليبيا الشريكة.",
       link: "/sectors/cement",
-      image: "https://cdn.pixabay.com/photo/2020/05/31/23/29/cement-truck-5240567_1280.jpg",
+      image: "https://images.unsplash.com/photo-1708596718852-1147b2ffbaf0?auto=format&fit=crop&w=1600&q=85",
       brandKey: "cement"
     }
   ];
@@ -361,3 +361,4 @@ export default function Hero() {
     </div>
   );
 }
+

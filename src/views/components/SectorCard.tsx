@@ -18,7 +18,7 @@ export default function SectorCard({ sector, index }: SectorCardProps) {
       ? "https://cdn.pixabay.com/photo/2022/01/24/02/48/ship-6962423_1280.jpg"
       : sector.id === "meat"
         ? "https://cdn.pixabay.com/photo/2015/05/29/17/21/container-789488_1280.jpg"
-        : "https://cdn.pixabay.com/photo/2020/05/31/23/29/cement-truck-5240567_1280.jpg";
+        : "https://images.unsplash.com/photo-1708596718852-1147b2ffbaf0?auto=format&fit=crop&w=800&q=85";
 
   return (
     <motion.div
@@ -106,3 +106,4 @@ export default function SectorCard({ sector, index }: SectorCardProps) {
     </motion.div>
   );
 }
+
