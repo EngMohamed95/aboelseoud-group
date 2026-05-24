@@ -7,6 +7,19 @@ export default function WorldMap() {
   const [selectedBranch, setSelectedBranch] = useState<Branch | null>(branchesData.find(b => b.id === "egypt") || null);
   const [hoveredBranch, setHoveredBranch] = useState<Branch | null>(null);
 
+  const branchGeoCoordinates: Record<string, { latitude: number; longitude: number }> = {
+    singapore: { latitude: 1.3521, longitude: 103.8198 },
+    netherlands: { latitude: 51.9244, longitude: 4.4777 },
+    malta: { latitude: 35.8989, longitude: 14.5146 },
+    turkey: { latitude: 41.0082, longitude: 28.9784 },
+    oman: { latitude: 23.588, longitude: 58.3829 },
+    mexico: { latitude: 19.1738, longitude: -96.1342 },
+    egypt: { latitude: 30.0444, longitude: 31.2357 },
+    libya: { latitude: 32.1167, longitude: 20.0667 },
+    brazil: { latitude: -23.5505, longitude: -46.6333 },
+    india: { latitude: 28.6139, longitude: 77.209 },
+  };
+
   // Supply lines connecting Egypt (HQ) to international offices/nodes
   const shippingPaths = [
     { from: "egypt", to: "singapore", label: "ممر طاقة آسيا" },
@@ -19,26 +32,15 @@ export default function WorldMap() {
     { from: "egypt", to: "oman", label: "تأمين مضيق هرمز" }
   ];
 
-  // Helper to translate GPS relative layout safely
+  // Project real latitude/longitude onto an equirectangular world map.
   const getCoordinates = (branchId: string) => {
-    const branch = branchesData.find((b) => b.id === branchId);
-    if (!branch) return { x: 50, y: 50 };
-    // Let's refine proportions: X corresponds to longitude, Y to latitude
-    // X range: Mexico (15%), Brazil (30%), Netherlands (42%), Malta (46%), Egypt (52%), Libya (48%), Turkey (53%), Oman (64%), India (72%), Singapore (82%)
-    // Y range: Netherlands (22%), Turkey (28%), Malta (32%), Egypt (38%), Libya (39%), Oman (42%), India (45%), Singapore (55%), Mexico (40%), Brazil (75%)
-    switch (branchId) {
-      case "mexico": return { x: 15, y: 46 };
-      case "brazil": return { x: 28, y: 72 };
-      case "netherlands": return { x: 42, y: 22 };
-      case "malta": return { x: 46, y: 32 };
-      case "libya": return { x: 48, y: 39 };
-      case "egypt": return { x: 52, y: 38 };
-      case "turkey": return { x: 55, y: 29 };
-      case "oman": return { x: 63, y: 44 };
-      case "india": return { x: 74, y: 46 };
-      case "singapore": return { x: 82, y: 58 };
-      default: return { x: 50, y: 50 };
-    }
+    const geo = branchGeoCoordinates[branchId];
+    if (!geo) return { x: 50, y: 50 };
+
+    return {
+      x: ((geo.longitude + 180) / 360) * 100,
+      y: ((90 - geo.latitude) / 180) * 100,
+    };
   };
 
   return (
@@ -118,15 +120,16 @@ export default function WorldMap() {
           </div>
 
           {/* SVG Map Container */}
-          <div className="flex-1 w-full relative bg-white">
+          <div className="flex-1 w-full relative bg-[#eef2f6]">
             {/* Real Stylized Vector World Map Background */}
-            <div className="absolute inset-0 pointer-events-none select-none overflow-hidden rounded-xl">
+            <div className="absolute inset-0 pointer-events-none select-none overflow-hidden rounded-xl bg-[#eef2f6]">
               <img 
-                src="https://images.unsplash.com/photo-1569336415962-a4bd9f69cd83?auto=format&fit=crop&w=1200&q=80" 
+                src="https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg" 
                 alt="خارطة العالم اللوجستية"
-                className="w-full h-full object-cover opacity-[0.22] filter contrast-125 grayscale"
+                className="w-full h-full object-fill opacity-80 grayscale contrast-125"
                 referrerPolicy="no-referrer"
               />
+              <div className="absolute inset-0 bg-white/25" />
             </div>
 
             <svg
