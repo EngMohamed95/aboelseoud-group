@@ -37,7 +37,7 @@ export default function Hero() {
       heading: "سلسلة تبريد وحفظ مغلقة متوافقة مع الشريعة",
       desc: "نستورد أجود اللحوم من مزارع البرازيل والهند النباتية، خاضعة لرقابة بيطرية مكثفة ومشحونة مجمدة عند -18 درجة مئوية تحت إشراف الحلال المعتمد.",
       link: "/sectors/meat",
-      image: "https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&w=1200&q=80"
+      image: "https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?auto=format&fit=crop&w=1200&q=80"
     },
     {
       id: "cement",
@@ -46,7 +46,7 @@ export default function Hero() {
       heading: "الرائد الإقليمي في تصدير الأسمنت البورتلاندي",
       desc: "ننتج أسمنتاً بورتلاندياً فائق المقاومة للظروف القاسية (CEM I 42.5R) بأكياس خماسية الطبقات عازلة للرطوبة لتشغيل عمليات إعمار دولة ليبيا الشريكة.",
       link: "/sectors/cement",
-      image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80"
+      image: "https://images.unsplash.com/photo-1773394089934-3e29f2a3d6a9?auto=format&fit=crop&w=1200&q=80"
     }
   ];
 

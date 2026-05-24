@@ -16,7 +16,7 @@ export default function Cement() {
     {
       title: "أكياس خماسية الطبقات فائقة التحمل للرطوبة",
       desc: "نعبئ الأسمنت بداخل عبوات متطورة ومحمية بطبقات بلاستيكية داخلية تمنع نفوذ الرطوبة الجوية أو بخار الماء المالح أثناء الرحلة البحرية والبرية الطويلة، مما يضمن كفاءة الخلط الخرساني بنسبة 100%.",
-      image: "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=600&q=80"
+      image: "https://images.unsplash.com/photo-1773394089934-3e29f2a3d6a9?auto=format&fit=crop&w=600&q=80"
     },
     {
       title: "خطوط بحرية وبرية يومية فائقة السرعة",
@@ -26,13 +26,13 @@ export default function Cement() {
     {
       title: "عمليات تشغيل وصيانة على مدار الساعة 24/7",
       desc: "يعمل الكادر الفني والهندسي في شركة جبل بالتناوب والورديات المستقرة للمحافظة على معدلات طاقة الإنتاج والتحميل دون انقطاع لتلبية المشاريع القومية.",
-      image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=600&q=80"
+      image: "https://images.unsplash.com/photo-1773394089934-3e29f2a3d6a9?auto=format&fit=crop&w=600&q=80"
     }
   ];
 
   const cementGallery = [
     {
-      url: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80",
+      url: "https://images.unsplash.com/photo-1773394089934-3e29f2a3d6a9?auto=format&fit=crop&w=800&q=80",
       caption: "مشاريع البنية التحتية والكباري والخرسانات الجاهزة"
     },
     {
@@ -56,7 +56,7 @@ export default function Cement() {
         {/* Unsplash dramatic industrial construction site */}
         <div 
           className="absolute inset-0 bg-cover bg-center z-0 scale-102 filter brightness-[1.05] opacity-15" 
-          style={{ backgroundImage: `url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1600')` }}
+          style={{ backgroundImage: `url('https://images.unsplash.com/photo-1773394089934-3e29f2a3d6a9?q=80&w=1600')` }}
         />
         {/* Gentle background overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#FAF9F6]/30 via-[#FAF9F6]/90 to-[#FAF9F6] z-0" />
@@ -123,7 +123,7 @@ export default function Cement() {
               {/* Heavy concrete crane plant sunset visual */}
               <div className="relative aspect-[16/9] w-full rounded-xl overflow-hidden mb-6 border border-slate-100 shadow-md">
                 <img
-                  src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=800"
+                  src="https://images.unsplash.com/photo-1773394089934-3e29f2a3d6a9?q=80&w=800"
                   alt="Cement plant production silos"
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"

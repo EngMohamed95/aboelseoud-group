@@ -65,8 +65,8 @@ export default function SectorCard({ sector, index }: SectorCardProps) {
             sector.id === "maritime"
               ? "https://images.unsplash.com/photo-1605281317010-fe5ffe798166?auto=format&fit=crop&w=600&q=80"
               : sector.id === "meat"
-              ? "https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&w=600&q=80"
-              : "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=600&q=80"
+              ? "https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?auto=format&fit=crop&w=600&q=80"
+              : "https://images.unsplash.com/photo-1773394089934-3e29f2a3d6a9?auto=format&fit=crop&w=600&q=80"
           }
           alt={sector.titleAr}
           className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
