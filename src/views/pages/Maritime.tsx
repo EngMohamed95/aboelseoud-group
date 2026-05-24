@@ -13,7 +13,7 @@ export default function Maritime() {
       title: "نقل النفط الخام والمواد البترولية",
       desc: "تحميل ونقل آمن وموثوق للمواد النفطية الخام والمقطرات والمشتقات عبر ناقلات ثنائية الجدار ومجهزة بهياكل حديدية معززة لضمان عدم التسرب.",
       icon: Anchor,
-      image: "https://images.unsplash.com/photo-1605281317010-fe5ffe798166?auto=format&fit=crop&w=600&q=80"
+      image: "https://cdn.pixabay.com/photo/2022/01/24/02/48/ship-6962423_1280.jpg"
     },
     {
       title: "إدارة الأساطيل الفنية المتكاملة",
@@ -40,7 +40,7 @@ export default function Maritime() {
 
   const galleryImages = [
     {
-      url: "https://images.unsplash.com/photo-1605281317010-fe5ffe798166?auto=format&fit=crop&w=800&q=80",
+      url: "https://cdn.pixabay.com/photo/2022/01/24/02/48/ship-6962423_1280.jpg",
       caption: "موانئ الشحن والتفريغ اللوجستي التابعة لنا"
     },
     {
@@ -75,7 +75,7 @@ export default function Maritime() {
         {/* Unsplash Maritime Freighter Wallpaper in Background */}
         <div 
           className="absolute inset-0 bg-cover bg-center z-0 scale-102 filter brightness-[1.05] opacity-20" 
-          style={{ backgroundImage: `url('https://images.unsplash.com/photo-1605281317010-fe5ffe798166?q=80&w=1600')` }}
+          style={{ backgroundImage: `url('https://cdn.pixabay.com/photo/2022/01/24/02/48/ship-6962423_1280.jpg')` }}
         />
         {/* Soft layout overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#FAFBFD]/30 via-[#FAFBFD]/90 to-[#FAFBFD] z-0" />

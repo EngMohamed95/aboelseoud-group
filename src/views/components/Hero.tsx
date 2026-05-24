@@ -29,7 +29,7 @@ export default function Hero() {
       title: "أبو السعود للنقل البحري وبترو-لوجستيكس",
       heading: "نحرك طاقة العالم بأمان وكفاءة معتمدة",
       desc: "نمتلك ونشط أساطيل ناقلات النفط والمواد البترولية المطابقة لمواصفات IMO الدولية لتأمين خطوط الطاقة وسلاسل الإمداد العالمية بين القارات.",
-      image: "https://images.unsplash.com/photo-1605281317010-fe5ffe798166?auto=format&fit=crop&w=1200&q=80",
+      image: "https://cdn.pixabay.com/photo/2022/01/24/02/48/ship-6962423_1280.jpg",
       link: "/sectors/maritime",
       brandKey: "maritime"
     },

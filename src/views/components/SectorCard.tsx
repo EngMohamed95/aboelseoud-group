@@ -15,7 +15,7 @@ export default function SectorCard({ sector, index }: SectorCardProps) {
 
   const image =
     sector.id === "maritime"
-      ? "https://images.unsplash.com/photo-1605281317010-fe5ffe798166?auto=format&fit=crop&w=600&q=80"
+      ? "https://cdn.pixabay.com/photo/2022/01/24/02/48/ship-6962423_1280.jpg"
       : sector.id === "meat"
         ? "https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?auto=format&fit=crop&w=600&q=80"
         : "https://images.unsplash.com/photo-1773394089934-3e29f2a3d6a9?auto=format&fit=crop&w=600&q=80";
