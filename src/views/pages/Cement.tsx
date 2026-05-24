@@ -66,11 +66,11 @@ export default function Cement() {
       <div className="relative py-28 overflow-hidden border-b border-amber-200 bg-slate-100/60">
         {/* Unsplash dramatic industrial construction site */}
         <div 
-          className="absolute inset-0 bg-cover bg-center z-0 scale-102 filter brightness-[1.05] opacity-15" 
+          className="absolute inset-0 bg-cover bg-center z-0 scale-102 filter brightness-[1.08] contrast-[1.05] opacity-52" 
           style={{ backgroundImage: `url('https://cdn.pixabay.com/photo/2020/05/31/23/29/cement-truck-5240567_1280.jpg')` }}
         />
         {/* Gentle background overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#FAF9F6]/30 via-[#FAF9F6]/90 to-[#FAF9F6] z-0" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#FAF9F6]/12 via-[#FAF9F6]/60 to-[#FAF9F6]/94 z-0" />
         <div className="absolute bottom-[-20px] left-1/3 w-[500px] h-[300px] bg-amber-500/10 blur-[130px] rounded-full pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-right">

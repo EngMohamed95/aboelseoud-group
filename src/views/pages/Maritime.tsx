@@ -74,11 +74,11 @@ export default function Maritime() {
       <div className="relative py-28 overflow-hidden border-b border-cyan-100 bg-slate-50">
         {/* Unsplash Maritime Freighter Wallpaper in Background */}
         <div 
-          className="absolute inset-0 bg-cover bg-center z-0 scale-102 filter brightness-[1.05] opacity-20" 
+          className="absolute inset-0 bg-cover bg-center z-0 scale-102 filter brightness-[1.08] contrast-[1.05] opacity-55" 
           style={{ backgroundImage: `url('https://cdn.pixabay.com/photo/2022/01/24/02/48/ship-6962423_1280.jpg')` }}
         />
         {/* Soft layout overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#FAFBFD]/30 via-[#FAFBFD]/90 to-[#FAFBFD] z-0" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#FAFBFD]/10 via-[#FAFBFD]/58 to-[#FAFBFD]/92 z-0" />
         <div className="absolute bottom-[-20px] left-1/4 w-[500px] h-[300px] bg-cyan-200/20 blur-[130px] rounded-full pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-right">

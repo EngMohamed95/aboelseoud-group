@@ -61,11 +61,11 @@ export default function MeatImport() {
       <div className="relative py-28 overflow-hidden border-b border-emerald-900/10">
         {/* Unsplash beautiful premium beef steak */}
         <div 
-          className="absolute inset-0 bg-cover bg-center z-0 scale-105 filter brightness-[0.7]" 
+          className="absolute inset-0 bg-cover bg-center z-0 scale-105 filter brightness-[0.98] contrast-[1.05]" 
           style={{ backgroundImage: `url('https://cdn.pixabay.com/photo/2015/05/29/17/21/container-789488_1280.jpg')` }}
         />
         {/* Soft warm mist & light green layout overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#FAF9F5]/20 via-[#FAF9F5]/75 to-[#FAF9F5] z-0" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#FAF9F5]/12 via-[#FAF9F5]/56 to-[#FAF9F5]/94 z-0" />
         <div className="absolute bottom-[-20px] left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-emerald-500/10 blur-[130px] rounded-full pointer-events-none" />
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-right">
