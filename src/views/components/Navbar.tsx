@@ -298,17 +298,6 @@ export default function Navbar() {
                 <div className="text-xs text-slate-500 font-mono">
                   GLOBAL PHONE: <span className="text-gold-600 font-semibold">+20 2 2400 5500</span>
                 </div>
-                <Link
-                  to="/contact"
-                  onClick={() => setIsOpen(false)}
-                  className="w-full text-center py-3 font-bold text-sm rounded transition-all duration-300 shadow"
-                  style={{
-                    background: `linear-gradient(90deg, ${brand.primary}, ${brand.accent})`,
-                    color: brand.key === "cement" ? "#050505" : "#ffffff",
-                  }}
-                >
-                  طلب تفاصيل الشراكة
-                </Link>
               </div>
             </div>
           </motion.div>

@@ -129,27 +129,25 @@ export default function Hero() {
             <img
               src={slides[currentIndex].image}
               alt={slides[currentIndex].title}
-              className="w-full h-full object-cover object-center scale-102 filter brightness-[0.7] contrast-[1.05]"
+              className="w-full h-full object-cover object-center scale-102 filter brightness-[0.9] contrast-[1.04] saturate-[1.08]"
               referrerPolicy="no-referrer"
             />
             
-            {/* Rich Luxury Multi-layered Overlays */}
-            {/* Primary RTL textual shielding (Dark right zone for Arabic text) */}
-            <div className="absolute inset-0 bg-gradient-to-l from-slate-950 via-slate-950/85 via-slate-900/60 to-transparent z-10" />
+            {/* Balanced overlays keep text readable while revealing more of the photo. */}
+            <div className="absolute inset-0 bg-gradient-to-l from-slate-950/72 via-slate-950/42 to-transparent z-10" />
             
-            {/* Secondary radial dark light filter to control glare and highlight the center */}
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_left,transparent_20%,rgba(2,6,23,0.92)_100%)] z-10" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_left,transparent_28%,rgba(2,6,23,0.38)_100%)] z-10" />
             
             {/* Sector-colored ambient overlay */}
             <div
               className="absolute inset-0 z-10"
               style={{
-                background: `linear-gradient(to top right, ${activeBrand.primary}22, transparent 45%, rgba(15,23,42,0.3))`,
+                background: `linear-gradient(to top right, ${activeBrand.primary}18, transparent 52%, rgba(15,23,42,0.12))`,
               }}
             />
             
             {/* Bottom transition line to stats flow */}
-            <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-slate-950 to-transparent z-10" />
+            <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-slate-950/78 to-transparent z-10" />
           </motion.div>
         </AnimatePresence>
       </div>
