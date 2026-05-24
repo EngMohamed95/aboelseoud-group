@@ -10,6 +10,8 @@ export default function Navbar() {
   const [isMegaOpen, setIsMegaOpen] = useState(false);
   const location = useLocation();
   const brand = getBrandForPath(location.pathname);
+  const useDarkBackgroundLogo = brand.key === "group" && location.pathname === "/" && !isScrolled;
+  const navLogo = useDarkBackgroundLogo ? brand.logoOnDark ?? brand.logo : brand.logo;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -88,7 +90,7 @@ export default function Navbar() {
                 style={{ backgroundColor: brand.soft }}
               />
               <img
-                src={brand.logo}
+                src={navLogo}
                 alt="Abo El-Seoud Group"
                 className="relative z-10 max-h-16 max-w-[280px] object-contain"
               />

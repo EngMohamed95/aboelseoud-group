@@ -1,4 +1,5 @@
 import groupLogo from "../مجموعة ابو السعود/10.png";
+import groupLogoWhite from "../مجموعة ابو السعود/10-2.png";
 import meatLogo from "../ابو السعود للحوم المجمدة/9.png";
 import petroleumLogo from "../ابو السعود للمواد البترولية/ابو-السعود-لنقل-المواد-البترولية (1).png";
 import cementLogo from "../جبل/80.png";
@@ -8,6 +9,7 @@ export type BrandKey = "group" | "maritime" | "meat" | "cement";
 export interface BrandTheme {
   key: BrandKey;
   logo: string;
+  logoOnDark?: string;
   primary: string;
   secondary: string;
   accent: string;
@@ -19,6 +21,7 @@ export const brandThemes: Record<BrandKey, BrandTheme> = {
   group: {
     key: "group",
     logo: groupLogo,
+    logoOnDark: groupLogoWhite,
     primary: "#1bb6e8",
     secondary: "#0f172a",
     accent: "#39c8f0",
