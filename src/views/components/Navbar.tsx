@@ -12,6 +12,10 @@ export default function Navbar() {
   const brand = getBrandForPath(location.pathname);
   const useDarkBackgroundLogo = brand.key === "group" && location.pathname === "/" && !isScrolled;
   const navLogo = useDarkBackgroundLogo ? brand.logoOnDark ?? brand.logo : brand.logo;
+  const navTextClass = isScrolled ? "text-slate-700 hover:text-slate-950" : "text-white/80 hover:text-white";
+  const navActiveClass = isScrolled ? "font-semibold" : "font-semibold text-white";
+  const navActiveStyle = isScrolled ? { color: brand.primary } : { color: "#ffffff" };
+  const navIndicatorStyle = isScrolled ? { backgroundColor: brand.primary } : { backgroundColor: "#ffffff" };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -113,15 +117,17 @@ export default function Navbar() {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`relative font-medium text-sm transition-colors duration-200 py-2 hover:text-gold-600 ${
-                  location.pathname === link.path ? "text-gold-600 font-semibold" : "text-slate-600"
+                className={`relative text-sm transition-colors duration-200 py-2 drop-shadow-sm ${
+                  location.pathname === link.path ? navActiveClass : `font-medium ${navTextClass}`
                 }`}
+                style={location.pathname === link.path ? navActiveStyle : undefined}
               >
                 {link.name}
                 {location.pathname === link.path && (
                   <motion.div
                     layoutId="activeNavIndicator"
-                    className="absolute bottom-0 right-0 left-0 h-0.5 bg-gold-500"
+                    className="absolute bottom-0 right-0 left-0 h-0.5"
+                    style={navIndicatorStyle}
                     transition={{ type: "spring", stiffness: 380, damping: 30 }}
                   />
                 )}
@@ -133,9 +139,10 @@ export default function Navbar() {
               <button
                 onClick={() => setIsMegaOpen(!isMegaOpen)}
                 onMouseEnter={() => setIsMegaOpen(true)}
-                className={`flex items-center gap-1.5 font-medium text-sm transition-colors duration-200 py-2 hover:text-gold-600 cursor-pointer ${
-                  location.pathname.startsWith("/sectors") ? "text-gold-600 font-semibold" : "text-slate-600"
+                className={`flex items-center gap-1.5 text-sm transition-colors duration-200 py-2 cursor-pointer drop-shadow-sm ${
+                  location.pathname.startsWith("/sectors") ? navActiveClass : `font-medium ${navTextClass}`
                 }`}
+                style={location.pathname.startsWith("/sectors") ? navActiveStyle : undefined}
               >
                 قطاعات المجموعة
                 <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${isMegaOpen ? "rotate-180" : ""}`} />
@@ -204,15 +211,17 @@ export default function Navbar() {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`relative font-medium text-sm transition-colors duration-200 py-2 hover:text-gold-600 ${
-                  location.pathname === link.path ? "text-gold-600 font-semibold" : "text-slate-600"
+                className={`relative text-sm transition-colors duration-200 py-2 drop-shadow-sm ${
+                  location.pathname === link.path ? navActiveClass : `font-medium ${navTextClass}`
                 }`}
+                style={location.pathname === link.path ? navActiveStyle : undefined}
               >
                 {link.name}
                 {location.pathname === link.path && (
                   <motion.div
                     layoutId="activeNavIndicator"
-                    className="absolute bottom-0 right-0 left-0 h-0.5 bg-gold-500"
+                    className="absolute bottom-0 right-0 left-0 h-0.5"
+                    style={navIndicatorStyle}
                     transition={{ type: "spring", stiffness: 380, damping: 30 }}
                   />
                 )}
@@ -224,7 +233,9 @@ export default function Navbar() {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 rounded-md text-slate-500 hover:text-slate-900 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-gold-500"
+              className={`p-2 rounded-md transition focus:outline-none focus:ring-2 focus:ring-gold-500 ${
+                isScrolled ? "text-slate-600 hover:text-slate-900 hover:bg-slate-100" : "text-white hover:bg-white/10"
+              }`}
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
