@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { motion } from "motion/react";
 import { ShieldCheck, Truck, Snowflake, Globe, Award, ShieldAlert, CheckCircle2, Leaf, Heart } from "lucide-react";
 import SectionTitle from "../components/SectionTitle";
@@ -232,14 +231,6 @@ export default function MeatImport() {
         <p className="text-emerald-800 text-sm leading-relaxed max-w-2xl mx-auto font-medium">
           نملك من التسهيلات القانونية والقدرة اللوجستية ما يتيح لنا إمدادكم بحصص تتراوح ما بين الحمولات الجزئية والتعاقدات السنوية الضخمة مع تفتيش الجودة المستمر.
         </p>
-        <div className="pt-4">
-          <Link
-            to="/contact"
-            className="px-8 py-3.5 bg-gradient-to-r from-emerald-700 to-emerald-600 hover:from-emerald-600 hover:to-emerald-500 text-white font-extrabold text-sm rounded-lg shadow-md transition cursor-pointer inline-block"
-          >
-            قدّم طلب تسعير اللحوم الغذائية الآن
-          </Link>
-        </div>
       </section>
     </div>
   );

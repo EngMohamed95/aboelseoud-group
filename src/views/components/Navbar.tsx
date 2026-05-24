@@ -220,20 +220,6 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* Right side global quick-link CTAs */}
-          <div className="hidden md:flex items-center space-x-4 space-x-reverse">
-            <Link
-              to="/contact"
-              className="px-5 py-2.5 text-xs font-extrabold rounded shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5"
-              style={{
-                background: `linear-gradient(90deg, ${brand.primary}, ${brand.accent})`,
-                color: brand.key === "cement" ? "#050505" : "#ffffff",
-              }}
-            >
-              طلب عرض أسعار
-            </Link>
-          </div>
-
           {/* Mobile Hamburguer Toggle */}
           <div className="md:hidden flex items-center">
             <button
