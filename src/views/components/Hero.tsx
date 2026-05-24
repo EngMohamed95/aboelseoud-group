@@ -40,7 +40,7 @@ export default function Hero() {
       heading: "سلسلة تبريد وحفظ مغلقة متوافقة مع الشريعة",
       desc: "نستورد أجود اللحوم من مزارع البرازيل والهند النباتية، خاضعة لرقابة بيطرية مكثفة ومشحونة مجمدة عند -18 درجة مئوية تحت إشراف الحلال المعتمد.",
       link: "/sectors/meat",
-      image: "https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?auto=format&fit=crop&w=1200&q=80",
+      image: "https://cdn.pixabay.com/photo/2015/05/29/17/21/container-789488_1280.jpg",
       brandKey: "meat"
     },
     {

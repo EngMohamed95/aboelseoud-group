@@ -62,7 +62,7 @@ export default function MeatImport() {
         {/* Unsplash beautiful premium beef steak */}
         <div 
           className="absolute inset-0 bg-cover bg-center z-0 scale-105 filter brightness-[0.7]" 
-          style={{ backgroundImage: `url('https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?q=80&w=1600')` }}
+          style={{ backgroundImage: `url('https://cdn.pixabay.com/photo/2015/05/29/17/21/container-789488_1280.jpg')` }}
         />
         {/* Soft warm mist & light green layout overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#FAF9F5]/20 via-[#FAF9F5]/75 to-[#FAF9F5] z-0" />
@@ -142,7 +142,7 @@ export default function MeatImport() {
               {/* Natural organic grazing pasture farm visual */}
               <div className="relative aspect-[16/9] w-full rounded-xl overflow-hidden mb-6 border border-emerald-100 shadow-sm">
                 <img
-                  src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?q=80&w=800"
+                  src="https://cdn.pixabay.com/photo/2015/05/29/17/21/container-789488_1280.jpg"
                   alt="Organic livestock premium pasture"
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
