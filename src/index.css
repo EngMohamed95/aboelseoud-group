@@ -69,3 +69,26 @@
   box-shadow: 0 0 35px rgba(197, 168, 128, 0.2);
   border-color: rgba(197, 168, 128, 0.4);
 }
+
+.brand-scope .text-gold-600,
+.brand-scope .text-gold-500,
+.brand-scope .text-gold-400,
+.brand-scope .hover\:text-gold-600:hover,
+.brand-scope .hover\:text-gold-700:hover {
+  color: var(--brand-primary);
+}
+
+.brand-scope .border-gold-500\/30,
+.brand-scope .hover\:border-gold-500\/20:hover {
+  border-color: color-mix(in srgb, var(--brand-primary) 35%, transparent);
+}
+
+.brand-scope .bg-gold-500\/5,
+.brand-scope .bg-gold-500\/10 {
+  background-color: var(--brand-soft);
+}
+
+.brand-scope .bg-gold-500,
+.brand-scope .bg-gold-600 {
+  background-color: var(--brand-primary);
+}

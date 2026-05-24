@@ -2,12 +2,14 @@ import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "motion/react";
 import { Menu, X, ChevronDown, Ship, Globe, HelpCircle, Phone, Award, ShieldAlert } from "lucide-react";
+import { getBrandForPath } from "../../models/brandModel";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMegaOpen, setIsMegaOpen] = useState(false);
   const location = useLocation();
+  const brand = getBrandForPath(location.pathname);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -61,16 +63,37 @@ export default function Navbar() {
   return (
     <nav
       id="main-navigation-bar"
+      style={{
+        "--brand-primary": brand.primary,
+        "--brand-secondary": brand.secondary,
+        "--brand-accent": brand.accent,
+        "--brand-soft": brand.soft,
+      } as React.CSSProperties}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
           ? "bg-white/95 backdrop-blur-md border-b border-slate-100 py-3 shadow-[0_4px_30px_rgba(15,23,42,0.03)]"
           : "bg-transparent py-5"
-      }`}
+      } brand-scope`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Brand Logo */}
-          <Link id="logo-anchor" to="/" className="flex items-center space-x-3 space-x-reverse">
+          <Link id="logo-anchor" to="/" className="flex items-center">
+            <div
+              className="relative group flex h-14 w-[190px] sm:w-[230px] items-center justify-center overflow-hidden rounded-lg border bg-white shadow-sm transition-all duration-300"
+              style={{ borderColor: `${brand.primary}33`, boxShadow: `0 8px 24px ${brand.primary}12` }}
+            >
+              <div
+                className="absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                style={{ backgroundColor: brand.soft }}
+              />
+              <img
+                src={brand.logo}
+                alt="Abo El-Seoud Group"
+                className="relative z-10 max-h-11 max-w-[205px] object-contain px-2"
+              />
+            </div>
+            <div className="hidden">
             <div className="relative group flex items-center justify-center p-2.5 bg-gradient-to-br from-slate-100 to-slate-50 border border-gold-500/30 rounded-lg overflow-hidden shrink-0 shadow-sm">
               <div className="absolute inset-0 bg-gold-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <Ship className="h-6 w-6 text-gold-600" />
@@ -82,6 +105,7 @@ export default function Navbar() {
               <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.15em] text-slate-500 mt-0.5 uppercase">
                 ABO EL-SEOUD GROUP
               </span>
+            </div>
             </div>
           </Link>
 
@@ -202,7 +226,11 @@ export default function Navbar() {
           <div className="hidden md:flex items-center space-x-4 space-x-reverse">
             <Link
               to="/contact"
-              className="px-5 py-2.5 bg-gradient-to-r from-gold-600 to-gold-500 hover:from-gold-500 hover:to-gold-400 text-slate-950 text-xs font-extrabold rounded shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5"
+              className="px-5 py-2.5 text-xs font-extrabold rounded shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5"
+              style={{
+                background: `linear-gradient(90deg, ${brand.primary}, ${brand.accent})`,
+                color: brand.key === "cement" ? "#050505" : "#ffffff",
+              }}
             >
               طلب عرض أسعار
             </Link>
@@ -289,7 +317,11 @@ export default function Navbar() {
                 <Link
                   to="/contact"
                   onClick={() => setIsOpen(false)}
-                  className="w-full text-center py-3 bg-gradient-to-r from-gold-600 to-gold-500 text-slate-950 font-bold text-sm rounded transition-all duration-300 shadow"
+                  className="w-full text-center py-3 font-bold text-sm rounded transition-all duration-300 shadow"
+                  style={{
+                    background: `linear-gradient(90deg, ${brand.primary}, ${brand.accent})`,
+                    color: brand.key === "cement" ? "#050505" : "#ffffff",
+                  }}
                 >
                   طلب تفاصيل الشراكة
                 </Link>

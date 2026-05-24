@@ -1,13 +1,25 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Ship, Mail, Phone, MapPin, ShieldCheck, ChevronLeft } from "lucide-react";
 import { branchesData } from "../../models/branchesModel";
+import { getBrandForPath } from "../../models/brandModel";
 
 export default function Footer() {
   const primaryBranches = branchesData.filter(b => ["egypt", "singapore", "netherlands", "libya"].includes(b.id));
+  const location = useLocation();
+  const brand = getBrandForPath(location.pathname);
 
   return (
-    <footer id="global-footer" className="bg-slate-50 border-t border-slate-200/80 pt-16 pb-8 relative overflow-hidden">
+    <footer
+      id="global-footer"
+      style={{
+        "--brand-primary": brand.primary,
+        "--brand-secondary": brand.secondary,
+        "--brand-accent": brand.accent,
+        "--brand-soft": brand.soft,
+      } as React.CSSProperties}
+      className="brand-scope bg-slate-50 border-t border-slate-200/80 pt-16 pb-8 relative overflow-hidden"
+    >
       {/* Absolute Decorative Glow Elements */}
       <div className="absolute top-0 right-1/4 w-[500px] h-[300px] bg-gold-500/5 blur-[120px] rounded-full pointer-events-none" />
       <div className="absolute bottom-0 left-10 w-[300px] h-[300px] bg-blue-500/5 blur-[100px] rounded-full pointer-events-none" />
@@ -18,12 +30,20 @@ export default function Footer() {
           {/* Column 1: Short Introduction */}
           <div className="space-y-6">
             <div className="flex items-center space-x-3 space-x-reverse">
+              <div
+                className="flex h-16 w-[230px] items-center justify-center overflow-hidden rounded-lg border bg-white p-2 shadow-sm"
+                style={{ borderColor: `${brand.primary}33`, boxShadow: `0 8px 24px ${brand.primary}10` }}
+              >
+                <img src={brand.logo} alt="Abo El-Seoud Group" className="max-h-12 max-w-[210px] object-contain" />
+              </div>
+              <div className="hidden">
               <div className="p-2 bg-white border border-slate-200 rounded-lg">
                 <Ship className="h-6 w-6 text-gold-600" />
               </div>
               <div className="flex flex-col">
                 <span className="font-display font-black text-lg text-slate-900">أبو السعود جروب</span>
                 <span className="text-[10px] font-mono tracking-wider text-gold-600 font-bold">ABO EL-SEOUD GROUP</span>
+              </div>
               </div>
             </div>
 
