@@ -171,31 +171,31 @@ export default function Maritime() {
               <h4 className="font-extrabold text-slate-900 text-base mb-6 border-b border-cyan-50/10 pb-3 text-right">مزايا أبو السعود ماريتايم</h4>
               
               <div className="space-y-5 text-right">
-                <div className="flex gap-4 items-start flex-row-reverse">
+                <div className="flex w-full items-start gap-4">
                   <div className="p-2.5 bg-cyan-50 text-cyan-600 rounded border border-cyan-100 shrink-0">
                     <Star className="h-4 w-4" />
                   </div>
-                  <div>
+                  <div className="min-w-0 flex-1 text-right">
                     <h5 className="text-sm font-bold text-slate-900">مطابقة المنظمة الملاحة الدولية (IMO)</h5>
                     <p className="text-[11px] text-slate-500 mt-1 leading-relaxed font-semibold">امتلاك شهادات التسجيل والترخيص البحري الأكثر صرامة لنقل المواد الهيدروكربونية والخطرة.</p>
                   </div>
                 </div>
 
-                <div className="flex gap-4 items-start flex-row-reverse">
+                <div className="flex w-full items-start gap-4">
                   <div className="p-2.5 bg-cyan-50 text-cyan-600 rounded border border-cyan-100 shrink-0">
                     <ShieldAlert className="h-4 w-4" />
                   </div>
-                  <div>
+                  <div className="min-w-0 flex-1 text-right">
                     <h5 className="text-sm font-bold text-slate-900">بروتوكولات الأمان البحري الكلي (ISPS)</h5>
                     <p className="text-[11px] text-slate-500 mt-1 leading-relaxed font-semibold">بروتوكولات دفاعية وتأمين للناقات والطواقم في الممرات المائية والموانئ عالية الخطورة.</p>
                   </div>
                 </div>
 
-                <div className="flex gap-4 items-start flex-row-reverse">
+                <div className="flex w-full items-start gap-4">
                   <div className="p-2.5 bg-cyan-50 text-cyan-600 rounded border border-cyan-100 shrink-0">
                     <Award className="h-4 w-4" />
                   </div>
-                  <div>
+                  <div className="min-w-0 flex-1 text-right">
                     <h5 className="text-sm font-bold text-slate-900">معايير حماية البيئة المائية</h5>
                     <p className="text-[11px] text-slate-500 mt-1 leading-relaxed font-semibold">تقنيات معالجة مياه التوازن وتصفير انبعاثات أكاسيد الكبريت كجزء من الملاحة المستدامة الخضراء.</p>
                   </div>

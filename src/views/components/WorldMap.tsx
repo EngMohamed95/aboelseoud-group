@@ -53,7 +53,7 @@ export default function WorldMap() {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 relative z-10">
         
         {/* Left Side: Detail panel of selected branch */}
-        <div className="lg:col-span-1 flex flex-col justify-between bg-navy-900/60 backdrop-blur border border-gold-500/10 p-6 rounded-xl hover:border-gold-500/20 transition-all duration-300">
+        <div className="lg:col-span-1 flex flex-col justify-between bg-white/80 backdrop-blur border border-slate-300 p-6 rounded-xl hover:border-slate-400 transition-all duration-300">
           <AnimatePresence mode="wait">
             {selectedBranch ? (
               <motion.div
@@ -65,33 +65,33 @@ export default function WorldMap() {
                 className="space-y-5"
               >
                 <div>
-                  <span className="inline-block px-2.5 py-0.5 text-[10px] uppercase font-mono tracking-widest bg-gold-500/10 text-gold-500 rounded border border-gold-500/20 mb-2">
+                  <span className="inline-block px-2.5 py-0.5 text-[10px] uppercase font-mono tracking-widest bg-slate-100 text-slate-700 rounded border border-slate-300 mb-2">
                     {selectedBranch.countryEn} / {selectedBranch.cityEn}
                   </span>
-                  <h3 className="text-xl sm:text-2xl font-bold text-white mb-1">
+                  <h3 className="text-xl sm:text-2xl font-bold text-slate-950 mb-1">
                     {selectedBranch.nameAr}
                   </h3>
-                  <p className="text-xs font-mono text-gray-400">
+                  <p className="text-xs font-mono text-slate-600">
                     {selectedBranch.nameEn}
                   </p>
                 </div>
 
-                <div className="p-3.5 bg-navy-950/80 rounded-lg border border-gold-500/5 text-sm text-gray-300 leading-relaxed">
-                  <span className="font-semibold text-gold-500 text-xs block mb-1">الدور المهني للفرع:</span>
+                <div className="p-3.5 bg-white/90 rounded-lg border border-slate-300 text-sm text-slate-700 leading-relaxed">
+                  <span className="font-semibold text-slate-900 text-xs block mb-1">الدور المهني للفرع:</span>
                   {selectedBranch.roleAr}
                 </div>
 
-                <div className="space-y-3 pt-2 border-t border-gold-500/10 text-xs">
-                  <div className="flex items-center gap-3 text-gray-300">
-                    <MapPin className="h-4 w-4 text-gold-500 shrink-0" />
+                <div className="space-y-3 pt-2 border-t border-slate-300 text-xs">
+                  <div className="flex items-center gap-3 text-slate-700">
+                    <MapPin className="h-4 w-4 text-slate-700 shrink-0" />
                     <span>{selectedBranch.addressAr}</span>
                   </div>
-                  <div className="flex items-center gap-3 text-gray-300">
-                    <Phone className="h-4 w-4 text-gold-500 shrink-0" />
+                  <div className="flex items-center gap-3 text-slate-700">
+                    <Phone className="h-4 w-4 text-slate-700 shrink-0" />
                     <span dir="ltr">{selectedBranch.phone}</span>
                   </div>
-                  <div className="flex items-center gap-3 text-gray-300">
-                    <Mail className="h-4 w-4 text-gold-500 shrink-0" />
+                  <div className="flex items-center gap-3 text-slate-700">
+                    <Mail className="h-4 w-4 text-slate-700 shrink-0" />
                     <span>{selectedBranch.email}</span>
                   </div>
                 </div>
@@ -103,8 +103,8 @@ export default function WorldMap() {
             )}
           </AnimatePresence>
 
-          <div className="pt-6 mt-6 border-t border-gold-500/10 text-center">
-            <span className="text-[11px] font-mono text-gray-500 uppercase tracking-widest block">
+          <div className="pt-6 mt-6 border-t border-slate-300 text-center">
+            <span className="text-[11px] font-mono text-slate-600 uppercase tracking-widest block">
               ممرات النقل البحري واللوجستيات العالمية
             </span>
           </div>
@@ -126,7 +126,7 @@ export default function WorldMap() {
               <img 
                 src="https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg" 
                 alt="خارطة العالم اللوجستية"
-                className="w-full h-full object-fill opacity-80 grayscale contrast-125"
+                className="w-full h-full object-fill opacity-35 grayscale contrast-75"
                 referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-white/25" />

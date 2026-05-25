@@ -154,23 +154,23 @@ export default function MeatImport() {
               </div>
               
               <ul className="space-y-4 text-xs text-emerald-900 font-bold">
-                <li className="flex items-start gap-3 flex-row-reverse">
+                <li className="flex w-full items-start gap-3">
                   <CheckCircle2 className="h-5 w-5 text-emerald-600 shrink-0 mt-0.5" />
-                  <div>
+                  <div className="min-w-0 flex-1 text-right">
                     <span className="font-bold text-emerald-950">ذبح يدوي غير آلي:</span>
                     <p className="text-emerald-700/80 text-[11px] mt-1 font-semibold">ذبح يدوي من جزارين مسلمين معتمدين وموجهين للقبلة ببلاد المنشأ.</p>
                   </div>
                 </li>
-                <li className="flex items-start gap-3 flex-row-reverse">
+                <li className="flex w-full items-start gap-3">
                   <CheckCircle2 className="h-5 w-5 text-emerald-600 shrink-0 mt-0.5" />
-                  <div>
+                  <div className="min-w-0 flex-1 text-right">
                     <span className="font-bold text-emerald-950">خلو تام من المركبات الكيميائية:</span>
                     <p className="text-emerald-700/80 text-[11px] mt-1 font-semibold">حيوانات حرة التغذية العشبية خالية من الهرمونات والمنشطات.</p>
                   </div>
                 </li>
-                <li className="flex items-start gap-3 flex-row-reverse">
+                <li className="flex w-full items-start gap-3">
                   <CheckCircle2 className="h-5 w-5 text-emerald-600 shrink-0 mt-0.5" />
-                  <div>
+                  <div className="min-w-0 flex-1 text-right">
                     <span className="font-bold text-emerald-950">تفتيش بيطري دوري مزدوج:</span>
                     <p className="text-emerald-700/80 text-[11px] mt-1 font-semibold">فحوص مخبرية عند موانئ بلاد المنشأ وفحوصات معملية مشددة بميناء الاستقبال بمصر.</p>
                   </div>
