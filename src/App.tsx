@@ -7,13 +7,13 @@ import AppRoutes from "./routes/AppRoutes";
 export default function App() {
   return (
     <HashRouter>
-      <div className="flex flex-col min-h-screen bg-navy-950 font-sans selection:bg-gold-500 selection:text-navy-950">
+      <div className="flex min-h-screen max-w-full flex-col overflow-x-clip bg-navy-950 font-sans selection:bg-gold-500 selection:text-navy-950">
         
         {/* Persistent Luxury Navigation header */}
         <Navbar />
 
         {/* Core dynamic content main frame */}
-        <main className="flex-grow">
+        <main className="min-w-0 flex-grow overflow-x-clip">
           <AppRoutes />
         </main>
 

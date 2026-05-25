@@ -129,7 +129,7 @@ export default function Hero() {
             <img
               src={slides[currentIndex].image}
               alt={slides[currentIndex].title}
-              className="w-full h-full object-cover object-center scale-102 filter brightness-[0.9] contrast-[1.04] saturate-[1.08]"
+              className="w-full h-full object-cover object-[60%_center] sm:object-center scale-102 filter brightness-[0.9] contrast-[1.04] saturate-[1.08]"
               referrerPolicy="no-referrer"
             />
             
@@ -234,12 +234,12 @@ export default function Hero() {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.98 }}
                 transition={{ duration: 0.4, delay: 0.25 }}
-                className="pt-4 flex flex-wrap gap-4 justify-start text-right"
+                className="pt-4 flex flex-col sm:flex-row sm:flex-wrap gap-4 justify-start text-right"
               >
                 <Link
                   id={`cta-sector-${slides[currentIndex].id}`}
                   to={slides[currentIndex].link}
-                  className="px-8 py-4 font-extrabold text-sm rounded cursor-pointer transition-all duration-300 transform hover:-translate-y-0.5 shadow-xl flex items-center gap-2.5"
+                  className="max-w-full justify-center px-5 sm:px-8 py-4 font-extrabold text-sm rounded cursor-pointer transition-all duration-300 transform hover:-translate-y-0.5 shadow-xl flex items-center gap-2.5 text-center leading-relaxed"
                   style={{
                     background: `linear-gradient(90deg, ${activeBrand.primary}, ${activeBrand.accent})`,
                     color: activeTextColor,
@@ -252,7 +252,7 @@ export default function Hero() {
 
                 <Link
                   to="/contact"
-                  className="px-6 py-4 bg-white/10 hover:bg-white/15 backdrop-blur-md border border-white/10 hover:border-white/20 text-white font-bold text-sm rounded transition-all duration-300 cursor-pointer shadow-md flex items-center gap-2"
+                  className="max-w-full justify-center px-5 sm:px-6 py-4 bg-white/10 hover:bg-white/15 backdrop-blur-md border border-white/10 hover:border-white/20 text-white font-bold text-sm rounded transition-all duration-300 cursor-pointer shadow-md flex items-center gap-2 text-center"
                 >
                   تواصل معنا
                 </Link>

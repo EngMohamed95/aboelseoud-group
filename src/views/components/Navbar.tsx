@@ -87,13 +87,13 @@ export default function Navbar() {
           {/* Brand Logo */}
           <Link id="logo-anchor" to="/" className="flex items-center">
             <div
-              className="relative flex h-20 w-[250px] sm:w-[320px] items-center justify-center overflow-visible transition-all duration-300"
+              className="relative flex h-16 w-[min(58vw,210px)] items-center justify-start overflow-hidden sm:h-20 sm:w-[320px] sm:justify-center sm:overflow-visible transition-all duration-300"
               style={{ filter: `drop-shadow(0 8px 18px ${brand.primary}18)` }}
             >
               <img
                 src={navLogo}
                 alt="Abo El-Seoud Group"
-                className="relative z-10 max-h-20 max-w-[310px] object-contain"
+                className="relative z-10 max-h-16 w-full object-contain sm:max-h-20 sm:max-w-[310px]"
               />
             </div>
             <div className="hidden">

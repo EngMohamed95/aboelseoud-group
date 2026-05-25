@@ -230,7 +230,7 @@ export default function Maritime() {
                   className="p-0 bg-white border border-slate-100 hover:border-cyan-300 rounded-2xl overflow-hidden relative shadow-lg hover:shadow-cyan-100/50 transition duration-300 group"
                 >
                   {/* Service Specific Image */}
-                  <div className="relative h-44 w-full overflow-hidden">
+                  <div className="relative h-52 w-full overflow-hidden sm:h-44">
                     <img
                       src={srv.image}
                       alt={srv.title}
@@ -277,7 +277,7 @@ export default function Maritime() {
               transition={{ duration: 0.5, delay: idx * 0.1 }}
               className="bg-white border border-slate-100 rounded-2xl p-2 shadow-md hover:shadow-lg transition duration-300 group"
             >
-              <div className="relative h-60 w-full overflow-hidden rounded-xl">
+              <div className="relative h-64 w-full overflow-hidden rounded-xl sm:h-60">
                 <img
                   src={img.url}
                   alt={img.caption}

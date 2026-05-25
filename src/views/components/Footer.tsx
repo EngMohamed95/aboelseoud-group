@@ -31,10 +31,10 @@ export default function Footer() {
           <div className="space-y-6">
             <div className="flex items-center space-x-3 space-x-reverse">
               <div
-                className="flex h-20 w-[300px] items-center justify-center overflow-visible"
+                className="flex h-20 w-full max-w-[280px] items-center justify-start overflow-hidden sm:w-[300px] sm:justify-center sm:overflow-visible"
                 style={{ filter: `drop-shadow(0 8px 18px ${brand.primary}14)` }}
               >
-                <img src={brand.logo} alt="Abo El-Seoud Group" className="max-h-20 max-w-[290px] object-contain" />
+                <img src={brand.logo} alt="Abo El-Seoud Group" className="max-h-20 w-full object-contain sm:max-w-[290px]" />
               </div>
               <div className="hidden">
               <div className="p-2 bg-white border border-slate-200 rounded-lg">

@@ -42,7 +42,7 @@ export default function SectorCard({ sector, index }: SectorCardProps) {
           style={{ background: `radial-gradient(circle at top, ${brand.primary}14, transparent 58%)` }}
         />
 
-        <div className="relative z-10 h-44 shrink-0 overflow-hidden border-b border-slate-100">
+        <div className="relative z-10 h-52 shrink-0 overflow-hidden border-b border-slate-100 sm:h-44">
           <div className="absolute inset-0 z-10 bg-gradient-to-t from-slate-900/45 via-transparent to-transparent" />
           <img
             src={image}
