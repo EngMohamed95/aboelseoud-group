@@ -6,6 +6,15 @@ import SectionTitle from "../components/SectionTitle";
 import WorldMap from "../components/WorldMap";
 import { brandThemes } from "../../models/brandModel";
 
+const MARITIME_PAGE_HERO_IMAGE = "/images/maritime-page-hero-harbor.png";
+const MARITIME_BRIDGE_RADAR_IMAGE = "/images/maritime-bridge-radar-panel.png";
+const MARITIME_DECK_LOADING_IMAGE = "/images/maritime-service-deck-loading.png";
+const MARITIME_ENGINE_ROOM_IMAGE = "/images/maritime-service-engine-room.png";
+const MARITIME_STRAIT_ESCORT_IMAGE = "/images/maritime-service-strait-escort.png";
+const MARITIME_NIGHT_TERMINAL_IMAGE = "/images/maritime-gallery-night-terminal.png";
+const MARITIME_SAFETY_BOOM_IMAGE = "/images/maritime-gallery-safety-boom.png";
+const MARITIME_CONTROL_CENTER_IMAGE = "/images/maritime-gallery-control-center.png";
+
 export default function Maritime() {
   const brand = brandThemes.maritime;
   const maritimeServices = [
@@ -13,19 +22,19 @@ export default function Maritime() {
       title: "نقل النفط الخام والمواد البترولية",
       desc: "تحميل ونقل آمن وموثوق للمواد النفطية الخام والمقطرات والمشتقات عبر ناقلات ثنائية الجدار ومجهزة بهياكل حديدية معززة لضمان عدم التسرب.",
       icon: Anchor,
-      image: "https://cdn.pixabay.com/photo/2022/01/24/02/48/ship-6962423_1280.jpg"
+      image: MARITIME_DECK_LOADING_IMAGE
     },
     {
       title: "إدارة الأساطيل الفنية المتكاملة",
       desc: "صيانة ميكانيكية دورية وهندسية وبناء أنظمة مراقبة ملاحة رقمية للسفن للتأكد من انسياب الحركة دون أعطال أو حوادث مفاجئة.",
       icon: Compass,
-      image: "https://images.unsplash.com/photo-1532635241-17e820acc59f?auto=format&fit=crop&w=600&q=80"
+      image: MARITIME_ENGINE_ROOM_IMAGE
     },
     {
       title: "الخدمات اللوجستية البحرية وتأمين الممرات",
       desc: "التنسيق الدبلوماسي والمطابقة المرفئية مع الموانئ الدولية لتسهيل عبور ناقلات المواد البترولية ممرات هرمز والبوسفور وروتردام وسنغافورة بكفاءة.",
       icon: ShieldCheck,
-      image: "https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?auto=format&fit=crop&w=600&q=80"
+      image: MARITIME_STRAIT_ESCORT_IMAGE
     }
   ];
 
@@ -40,15 +49,15 @@ export default function Maritime() {
 
   const galleryImages = [
     {
-      url: "https://cdn.pixabay.com/photo/2022/01/24/02/48/ship-6962423_1280.jpg",
+      url: MARITIME_NIGHT_TERMINAL_IMAGE,
       caption: "موانئ الشحن والتفريغ اللوجستي التابعة لنا"
     },
     {
-      url: "https://images.unsplash.com/photo-1532635241-17e820acc59f?auto=format&fit=crop&w=800&q=80",
+      url: MARITIME_SAFETY_BOOM_IMAGE,
       caption: "فحوص الأمان ومكافحة التلوث المائي"
     },
     {
-      url: "https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?auto=format&fit=crop&w=800&q=80",
+      url: MARITIME_CONTROL_CENTER_IMAGE,
       caption: "غرفة التوجيه والتحكم والمراقبة الفضائية"
     }
   ];
@@ -75,7 +84,7 @@ export default function Maritime() {
         {/* Unsplash Maritime Freighter Wallpaper in Background */}
         <div 
           className="absolute inset-0 bg-cover bg-center z-0 scale-102 filter brightness-[1.08] contrast-[1.05] opacity-55" 
-          style={{ backgroundImage: `url('https://cdn.pixabay.com/photo/2022/01/24/02/48/ship-6962423_1280.jpg')` }}
+          style={{ backgroundImage: `url('${MARITIME_PAGE_HERO_IMAGE}')` }}
         />
         {/* Soft layout overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#FAFBFD]/10 via-[#FAFBFD]/58 to-[#FAFBFD]/92 z-0" />
@@ -148,7 +157,7 @@ export default function Maritime() {
               {/* Technical Ship Radar / Bridge Visual */}
               <div className="relative aspect-[16/9] w-full rounded-xl overflow-hidden mb-6 border border-cyan-100 shadow-sm">
                 <img
-                  src="https://images.unsplash.com/photo-1532635241-17e820acc59f?q=80&w=800"
+                  src={MARITIME_BRIDGE_RADAR_IMAGE}
                   alt="Marine Navigation Bridge Radar"
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"

@@ -5,6 +5,15 @@ import { HardHat, ShieldCheck, Award, Construction, Compass, ShieldAlert, Zap, L
 import SectionTitle from "../components/SectionTitle";
 import { brandThemes } from "../../models/brandModel";
 
+const CEMENT_PAGE_HERO_IMAGE = "/images/cement-factory-page-hero.png";
+const CEMENT_MATERIALS_PANEL_IMAGE = "/images/cement-materials-panel.png";
+const CEMENT_PACKAGING_IMAGE = "/images/cement-packaging-feature.png";
+const CEMENT_CONVOY_IMAGE = "/images/cement-convoy-feature.png";
+const CEMENT_OPERATIONS_IMAGE = "/images/cement-operations-feature.png";
+const CEMENT_INFRASTRUCTURE_IMAGE = "/images/cement-infrastructure-gallery.png";
+const CEMENT_LOADING_IMAGE = "/images/cement-loading-gallery.png";
+const CEMENT_LAB_IMAGE = "/images/cement-lab-gallery.png";
+
 export default function Cement() {
   const brand = brandThemes.cement;
   const cementStats = [
@@ -18,31 +27,31 @@ export default function Cement() {
     {
       title: "أكياس خماسية الطبقات فائقة التحمل للرطوبة",
       desc: "نعبئ الأسمنت بداخل عبوات متطورة ومحمية بطبقات بلاستيكية داخلية تمنع نفوذ الرطوبة الجوية أو بخار الماء المالح أثناء الرحلة البحرية والبرية الطويلة، مما يضمن كفاءة الخلط الخرساني بنسبة 100%.",
-      image: "https://images.unsplash.com/photo-1708596718852-1147b2ffbaf0?auto=format&fit=crop&w=800&q=85"
+      image: CEMENT_PACKAGING_IMAGE
     },
     {
       title: "خطوط بحرية وبرية يومية فائقة السرعة",
       desc: "نملك ونشغل خطوط لوجستية مباشرة تربط مصانع التعبئة والإنتاج بمصر مباشرة بأسواق التوزيع والتعقب في دولة ليبيا الشقيقة عبر معابر السلوم والموانئ الساحلية لضمان التسليم اللحظي.",
-      image: "https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?auto=format&fit=crop&w=600&q=80"
+      image: CEMENT_CONVOY_IMAGE
     },
     {
       title: "عمليات تشغيل وصيانة على مدار الساعة 24/7",
       desc: "يعمل الكادر الفني والهندسي في شركة جبل بالتناوب والورديات المستقرة للمحافظة على معدلات طاقة الإنتاج والتحميل دون انقطاع لتلبية المشاريع القومية.",
-      image: "https://images.unsplash.com/photo-1708596718852-1147b2ffbaf0?auto=format&fit=crop&w=800&q=85"
+      image: CEMENT_OPERATIONS_IMAGE
     }
   ];
 
   const cementGallery = [
     {
-      url: "https://images.unsplash.com/photo-1708596718852-1147b2ffbaf0?auto=format&fit=crop&w=1000&q=85",
+      url: CEMENT_INFRASTRUCTURE_IMAGE,
       caption: "مشاريع البنية التحتية والكباري والخرسانات الجاهزة"
     },
     {
-      url: "https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?auto=format&fit=crop&w=800&q=80",
+      url: CEMENT_LOADING_IMAGE,
       caption: "معدات الشحن والتحميل البري للمعابر الدولية"
     },
     {
-      url: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80",
+      url: CEMENT_LAB_IMAGE,
       caption: "مختبر الرقابة وضبط نسب المواد الكيميائية بالكلينكر"
     }
   ];
@@ -67,7 +76,7 @@ export default function Cement() {
         {/* Unsplash dramatic industrial construction site */}
         <div 
           className="absolute inset-0 bg-cover bg-center z-0 scale-102 filter brightness-[1.08] contrast-[1.05] opacity-52" 
-          style={{ backgroundImage: `url('https://images.unsplash.com/photo-1708596718852-1147b2ffbaf0?auto=format&fit=crop&w=1600&q=85')` }}
+          style={{ backgroundImage: `url('${CEMENT_PAGE_HERO_IMAGE}')` }}
         />
         {/* Gentle background overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#FAF9F6]/12 via-[#FAF9F6]/60 to-[#FAF9F6]/94 z-0" />
@@ -134,7 +143,7 @@ export default function Cement() {
               {/* Heavy concrete crane plant sunset visual */}
               <div className="relative aspect-[16/9] w-full rounded-xl overflow-hidden mb-6 border border-slate-100 shadow-md">
                 <img
-                  src="https://images.unsplash.com/photo-1708596718852-1147b2ffbaf0?auto=format&fit=crop&w=1000&q=85"
+                  src={CEMENT_MATERIALS_PANEL_IMAGE}
                   alt="Cement plant production silos"
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
@@ -148,25 +157,25 @@ export default function Cement() {
               <h4 className="font-extrabold text-slate-900 text-base mb-6 border-b border-slate-100 pb-3">دواعي الاعتماد على أسمنت جبل</h4>
               
               <div className="space-y-4 text-xs text-slate-600 font-bold">
-                <div className="flex gap-3.5 items-start justify-end flex-row-reverse">
+                <div className="flex w-full items-start gap-3.5">
                   <HardHat className="h-5 w-5 text-amber-600 shrink-0 mt-0.5" />
-                  <div className="text-right">
+                  <div className="min-w-0 flex-1 text-right">
                     <span className="font-bold text-slate-900">إشراف هندسة ومخبري كامل</span>
                     <p className="text-slate-500 text-[11px] mt-1 font-semibold">مختبرات تفتيش لفحص جودة الكلينكر ونعومة الخلطات باستمرار.</p>
                   </div>
                 </div>
 
-                <div className="flex gap-3.5 items-start justify-end flex-row-reverse">
+                <div className="flex w-full items-start gap-3.5">
                   <Award className="h-5 w-5 text-amber-600 shrink-0 mt-0.5" />
-                  <div className="text-right">
+                  <div className="min-w-0 flex-1 text-right">
                     <span className="font-bold text-slate-900">درجة صلابة 42.5R فائقة</span>
                     <p className="text-slate-500 text-[11px] mt-1 font-semibold">تحمل هائل لضغوط الخرسانات الإنشائية في ناطحات السحاب ومصارف الصرف الصحي.</p>
                   </div>
                 </div>
 
-                <div className="flex gap-3.5 items-start justify-end flex-row-reverse">
+                <div className="flex w-full items-start gap-3.5">
                   <ShieldCheck className="h-5 w-5 text-amber-600 shrink-0 mt-0.5" />
-                  <div className="text-right">
+                  <div className="min-w-0 flex-1 text-right">
                     <span className="font-bold text-slate-900">الوفاء بجميع الحمولات والعقود</span>
                     <p className="text-slate-500 text-[11px] mt-1 font-semibold">خطوط معابر برية ممهدة وموانئ بحرية مخصصة للتحميل والتصدير للمؤسسات والحكومات الشريكة.</p>
                   </div>

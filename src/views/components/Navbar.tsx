@@ -308,7 +308,7 @@ export default function Navbar() {
 
               <div className="pt-4 px-3 flex flex-col gap-3">
                 <div className="text-xs text-slate-500 font-mono">
-                  GLOBAL PHONE: <span className="text-gold-600 font-semibold">+20 2 2400 5500</span>
+                  GLOBAL PHONE: <span className="text-gold-600 font-semibold">+971 4 2400 5500</span>
                 </div>
               </div>
             </div>

@@ -46,10 +46,10 @@ export default function Contact() {
                 مقر الرئاسة الرئيسي العام
               </span>
               <h3 className="text-2xl font-extrabold text-slate-900 mt-4">
-                المكتب التنفيذي المركزي (القاهرة، مصر)
+                المكتب التنفيذي المركزي (دبي، الإمارات العربية المتحدة)
               </h3>
               <p className="text-slate-600 text-sm leading-relaxed mt-2 font-semibold">
-                يتولى المقر الرئيسي في القاهرة إدارة وتنسيق كافة فروع وعقود واتجاهات الشركات التابعة لمجموعة أبو السعود جروب؛ ويشمل ذلك تخطيط شواحن البترول وحصص الأغذية والأسمنت.
+                يتولى المقر الرئيسي في دبي إدارة وتنسيق كافة فروع وعقود واتجاهات الشركات التابعة لمجموعة أبو السعود جروب؛ ويشمل ذلك تخطيط شواحن البترول وحصص الأغذية والأسمنت.
               </p>
             </div>
 
@@ -58,7 +58,7 @@ export default function Contact() {
                 <MapPin className="h-5 w-5 text-gold-600 shrink-0 mt-0.5" />
                 <div>
                   <span className="text-[10px] text-slate-400 block uppercase font-mono font-bold">LOCATION ADDRESS</span>
-                  <p className="text-sm text-slate-900 mt-0.5 font-bold animate-fade-in">القاهرة الجديدة، التجمع الخامس، شارع التسعين الشمالي، بداخل القطاع المالي والإداري الأول.</p>
+                  <p className="text-sm text-slate-900 mt-0.5 font-bold animate-fade-in">دبي، الإمارات العربية المتحدة.</p>
                 </div>
               </div>
 
@@ -66,7 +66,7 @@ export default function Contact() {
                 <Phone className="h-5 w-5 text-gold-600 shrink-0 mt-0.5" />
                 <div>
                   <span className="text-[10px] text-slate-400 block uppercase font-mono font-bold">HQ TELEPHONE</span>
-                  <p className="text-sm text-slate-900 mt-0.5 font-bold" dir="ltr">+20 2 2400 5500</p>
+                  <p className="text-sm text-slate-900 mt-0.5 font-bold" dir="ltr">+971 4 2400 5500</p>
                 </div>
               </div>
 
@@ -74,7 +74,7 @@ export default function Contact() {
                 <Mail className="h-5 w-5 text-gold-600 shrink-0 mt-0.5" />
                 <div>
                   <span className="text-[10px] text-slate-400 block uppercase font-mono font-bold font-semibold">HQ EMAIL</span>
-                  <p className="text-sm text-slate-900 mt-0.5 font-bold">egypt@aboelseoud-group.com</p>
+                  <p className="text-sm text-slate-900 mt-0.5 font-bold">dubai@aboelseoud-group.com</p>
                 </div>
               </div>
 
@@ -82,7 +82,7 @@ export default function Contact() {
                 <Clock className="h-5 w-5 text-gold-600 shrink-0 mt-0.5" />
                 <div>
                   <span className="text-[10px] text-slate-400 block uppercase font-mono font-bold">GMT WORK HOURS</span>
-                  <p className="text-sm text-slate-900 mt-0.5 font-bold">من الأحد إلى الخميس: 08:00 صباحاً - 05:00 مساءً (توقيت القاهرة)</p>
+                  <p className="text-sm text-slate-900 mt-0.5 font-bold">من الأحد إلى الخميس: 08:00 صباحاً - 05:00 مساءً (توقيت دبي)</p>
                 </div>
               </div>
             </div>

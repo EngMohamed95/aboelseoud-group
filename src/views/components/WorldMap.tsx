@@ -4,7 +4,7 @@ import { MapPin, Phone, Mail, Globe, Ship } from "lucide-react";
 import { branchesData, Branch } from "../../models/branchesModel";
 
 export default function WorldMap() {
-  const [selectedBranch, setSelectedBranch] = useState<Branch | null>(branchesData.find(b => b.id === "egypt") || null);
+  const [selectedBranch, setSelectedBranch] = useState<Branch | null>(branchesData.find(b => b.id === "dubai") || null);
   const [hoveredBranch, setHoveredBranch] = useState<Branch | null>(null);
 
   const branchGeoCoordinates: Record<string, { latitude: number; longitude: number }> = {
@@ -14,22 +14,22 @@ export default function WorldMap() {
     turkey: { latitude: 41.0082, longitude: 28.9784 },
     oman: { latitude: 23.588, longitude: 58.3829 },
     mexico: { latitude: 19.1738, longitude: -96.1342 },
-    egypt: { latitude: 30.0444, longitude: 31.2357 },
+    dubai: { latitude: 25.2048, longitude: 55.2708 },
     libya: { latitude: 32.1167, longitude: 20.0667 },
     brazil: { latitude: -23.5505, longitude: -46.6333 },
     india: { latitude: 28.6139, longitude: 77.209 },
   };
 
-  // Supply lines connecting Egypt (HQ) to international offices/nodes
+  // Supply lines connecting Dubai (HQ) to international offices/nodes
   const shippingPaths = [
-    { from: "egypt", to: "singapore", label: "ممر طاقة آسيا" },
-    { from: "egypt", to: "netherlands", label: "خط روتردام البترولي" },
-    { from: "egypt", to: "libya", label: "مستكشف الأسمنت" },
-    { from: "egypt", to: "brazil", label: "سلسلة الأمن الغذائي" },
-    { from: "egypt", to: "india", label: "مورد البروتين الحلال" },
-    { from: "egypt", to: "malta", label: "صيانة أسطول المتوسط" },
-    { from: "egypt", to: "turkey", label: "خط عبور مضيق البوسفور" },
-    { from: "egypt", to: "oman", label: "تأمين مضيق هرمز" }
+    { from: "dubai", to: "singapore", label: "ممر طاقة آسيا" },
+    { from: "dubai", to: "netherlands", label: "خط روتردام البترولي" },
+    { from: "dubai", to: "libya", label: "مستكشف الأسمنت" },
+    { from: "dubai", to: "brazil", label: "سلسلة الأمن الغذائي" },
+    { from: "dubai", to: "india", label: "مورد البروتين الحلال" },
+    { from: "dubai", to: "malta", label: "صيانة أسطول المتوسط" },
+    { from: "dubai", to: "turkey", label: "خط عبور مضيق البوسفور" },
+    { from: "dubai", to: "oman", label: "تأمين مضيق هرمز" }
   ];
 
   // Project real latitude/longitude onto an equirectangular world map.
@@ -197,7 +197,7 @@ export default function WorldMap() {
             {branchesData.map((branch) => {
               const coords = getCoordinates(branch.id);
               const isSelected = selectedBranch?.id === branch.id;
-              const isHQ = branch.id === "egypt";
+              const isHQ = branch.id === "dubai";
               const cleanCountryName = branch.countryAr
                 .replace("جمهورية ", "")
                 .replace(" الاتحادية", "")

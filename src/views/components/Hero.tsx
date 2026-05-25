@@ -29,7 +29,7 @@ export default function Hero() {
       title: "أبو السعود للنقل البحري وبترو-لوجستيكس",
       heading: "نحرك طاقة العالم بأمان وكفاءة معتمدة",
       desc: "نمتلك ونشط أساطيل ناقلات النفط والمواد البترولية المطابقة لمواصفات IMO الدولية لتأمين خطوط الطاقة وسلاسل الإمداد العالمية بين القارات.",
-      image: "https://cdn.pixabay.com/photo/2022/01/24/02/48/ship-6962423_1280.jpg",
+      image: "/images/maritime-home-hero-tanker.png",
       link: "/sectors/maritime",
       brandKey: "maritime"
     },
@@ -50,7 +50,7 @@ export default function Hero() {
       heading: "الرائد الإقليمي في تصدير الأسمنت البورتلاندي",
       desc: "ننتج أسمنتاً بورتلاندياً فائق المقاومة للظروف القاسية (CEM I 42.5R) بأكياس خماسية الطبقات عازلة للرطوبة لتشغيل عمليات إعمار دولة ليبيا الشريكة.",
       link: "/sectors/cement",
-      image: "https://images.unsplash.com/photo-1708596718852-1147b2ffbaf0?auto=format&fit=crop&w=1600&q=85",
+      image: "/images/cement-truck-bags-hero.png",
       brandKey: "cement"
     }
   ];

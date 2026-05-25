@@ -33,7 +33,7 @@ export default function SectionTitle({ title, subtitle, badge, center = true, li
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className={`text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight mb-4 ${
+        className={`text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight leading-[1.35] mb-5 ${
           light ? "text-white" : "text-slate-900"
         }`}
       >
@@ -46,7 +46,7 @@ export default function SectionTitle({ title, subtitle, badge, center = true, li
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.1 }}
-          className={`text-base sm:text-lg leading-relaxed mt-2 animate-fade-in ${
+          className={`text-base sm:text-lg leading-[1.9] mt-2 animate-fade-in ${
             light ? "text-slate-300" : "text-slate-600"
           }`}
         >

@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap');
 @import "tailwindcss";
 
 @theme {
   --font-sans: "Almarai", system-ui, -apple-system, sans-serif;
   --font-display: "Almarai", sans-serif;
-  --font-mono: "JetBrains Mono", monospace;
+  --font-mono: "Almarai", system-ui, -apple-system, sans-serif;
 
   --color-navy-950: #fafbfc; /* Modern extra-light off-white background */
   --color-navy-900: #ffffff; /* Premium white background for sections & cards */
@@ -30,8 +30,22 @@
   }
 
   body {
+    font-family: var(--font-sans);
     direction: rtl; /* Set default to Arabic RTL */
     overflow-x: hidden;
+  }
+
+  *,
+  *::before,
+  *::after {
+    font-family: inherit;
+  }
+
+  button,
+  input,
+  textarea,
+  select {
+    font: inherit;
   }
 
   /* Custom premium light scrollbar */
@@ -117,4 +131,22 @@
 .brand-scope .shadow-gold-950\/40 {
   --tw-shadow-color: color-mix(in srgb, var(--brand-primary) 30%, transparent);
   --tw-shadow: var(--tw-shadow-colored);
+}
+
+.tracking-tight,
+.tracking-wide,
+.tracking-wider,
+.tracking-widest,
+[class*="tracking-["] {
+  letter-spacing: 0;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.35;
+}
+
+.leading-tight {
+  line-height: 1.45;
 }

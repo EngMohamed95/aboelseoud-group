@@ -5,7 +5,7 @@ import { branchesData } from "../../models/branchesModel";
 import { getBrandForPath } from "../../models/brandModel";
 
 export default function Footer() {
-  const primaryBranches = branchesData.filter(b => ["egypt", "singapore", "netherlands", "libya"].includes(b.id));
+  const primaryBranches = branchesData.filter(b => ["dubai", "singapore", "netherlands", "libya"].includes(b.id));
   const location = useLocation();
   const brand = getBrandForPath(location.pathname);
 
@@ -54,7 +54,7 @@ export default function Footer() {
             <div className="space-y-2 pt-2">
               <div className="flex items-center gap-2.5 text-xs text-slate-600 font-semibold">
                 <Phone className="h-4 w-4 text-gold-600 shrink-0" />
-                <span dir="ltr">+20 2 2400 5500</span>
+                <span dir="ltr">+971 4 2400 5500</span>
               </div>
               <div className="flex items-center gap-2.5 text-xs text-slate-600 font-semibold">
                 <Mail className="h-4 w-4 text-gold-600 shrink-0" />

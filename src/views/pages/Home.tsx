@@ -108,7 +108,7 @@ export default function Home() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent" />
               <div className="absolute bottom-4 right-4 text-white text-xs font-bold font-mono">
-                مقر الإدارة العامة - القاهرة
+                مقر الإدارة العامة - دبي
               </div>
             </div>
 
@@ -126,7 +126,7 @@ export default function Home() {
                   <div className="p-2.5 bg-blue-500/10 text-blue-600 rounded-lg font-bold text-sm shrink-0">10+</div>
                   <div className="flex-grow">
                     <h4 className="text-xs font-bold text-slate-900">مكاتب قارية وحضور مباشر</h4>
-                    <p className="text-[11px] text-slate-500 mt-0.5">من سنغافورة وهولندا إلى البرازيل والهند ومصر.</p>
+                    <p className="text-[11px] text-slate-500 mt-0.5">من دبي وسنغافورة وهولندا إلى البرازيل والهند.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4 p-4 bg-slate-50 rounded-xl border border-slate-100 flex-row-reverse">
@@ -210,7 +210,7 @@ export default function Home() {
             <div className="p-5 bg-white border border-slate-200/60 rounded-xl shadow-sm">
               <span className="text-xs text-slate-500 font-bold block mb-1">الرسم المباشر للهاتف الموحد:</span>
               <span id="corporate-hq-phone" className="text-2xl font-bold font-mono text-gold-600 block" dir="ltr">
-                +20 2 2400 5500
+                +971 4 2400 5500
               </span>
             </div>
           </div>
